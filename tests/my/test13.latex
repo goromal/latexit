@@ -1,0 +1,18 @@
+\documentclass[a4paper, oneside, 10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\begin{document}
+
+
+\begin{verbatim}
+This text is preformatted a        af f s   sdf sdf s     s df 
+\end{verbatim}
+
+
+I love this quote:
+\begin{quote}
+ You are awesome!
+\end{quote}
+
+
+\end{document}

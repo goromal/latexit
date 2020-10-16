@@ -1,0 +1,76 @@
+\documentclass[a4paper, oneside, 10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{listings}
+\begin{document}
+
+
+
+\lstset{frame=single, language=java}
+\begin{lstlisting}
+
+/**
+ * The HelloWorldApp class implements an application that
+ * simply displays "Hello World!" to the standard output.
+ */
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); //Display the string.
+    }
+}
+\end{lstlisting}
+
+\lstset{frame=single, language=pascal}
+\begin{lstlisting}
+
+for i:=maxint to 0 do
+begin
+{ do nothing }
+end;
+Write('Case insensitive');
+Write('Pascal keywords.');
+\end{lstlisting}
+
+
+
+\lstset{frame=single, language=PHP}
+\begin{lstlisting}
+
+echo "Hello, Dokuwiki!";
+\end{lstlisting}
+
+\lstset{frame=single, language=PHP}
+\begin{lstlisting}
+
+echo "Hello again, Dokuwiki!;
+\end{lstlisting}
+
+
+
+\lstset{frame=single, language=HTML}
+\begin{lstlisting}
+
+I am <strong>strong</strong>
+\end{lstlisting}
+
+\lstset{frame=single, language=HTML}
+\begin{lstlisting}
+
+I am <strong>stronger</strong>
+\end{lstlisting}
+
+\lstset{frame=single, language=php, title=myexample.php}
+\begin{lstlisting}
+
+<?php echo "hello world!"; ?>
+\end{lstlisting}
+
+\lstset{frame=single, language=php, title=myexample.php}
+\begin{lstlisting}
+
+<?php echo "hello world!"; ?>
+\end{lstlisting}
+
+
+
+\end{document}

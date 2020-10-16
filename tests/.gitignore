@@ -1,0 +1,8 @@
+*.pdf
+*.log
+*.aux
+log
+*.out
+exported/*
+*.backup
+*.jpg

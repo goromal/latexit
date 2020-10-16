@@ -1,0 +1,9 @@
+\documentclass[a4paper, oneside, 10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\begin{document}
+
+blablabla **aaa**
+ **bb** 
+
+\end{document}

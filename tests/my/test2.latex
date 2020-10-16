@@ -1,0 +1,24 @@
+\documentclass[a4paper, oneside, 10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[normalem]{ulem}
+\usepackage{fixltx2e}
+\begin{document}
+
+\textbf{Tučné}
+\emph{Kurzíva}
+\underline{Podtržené}
+\texttt{Neproporcionální text}
+\textsubscript{Dolní index}
+\textsuperscript{Horní index}
+\sout{Přeškrtnuté}
+
+Odstavec
+Druhý
+
+Odstavec\\
+Druhý
+
+xxx\footnote{Poznámka pod čarou}
+
+\end{document}

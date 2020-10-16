@@ -1,0 +1,28 @@
+\documentclass[a4paper, oneside, 10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{soul}
+\begin{document}
+
+8-)
+8-O
+:-(
+:-)
+=)
+:-/
+:-\textbackslash{}
+:-?
+:-D
+:-P
+:-O
+:-X
+:-|
+;-)
+a \textasciicircum{}\_\textasciicircum{}
+:?:
+:!:
+LOL
+\hl{FIXME}
+\hl{DELETEME}
+
+\end{document}

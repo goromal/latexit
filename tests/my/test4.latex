@@ -1,0 +1,18 @@
+\documentclass[a4paper, oneside, 10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[unicode]{hyperref}
+\begin{document}
+
+\section{\texorpdfstring{Nadpis 1}{Nadpis 1}}
+\label{sec:nadpis_1}
+\subsection{\texorpdfstring{Nadpis 2}{Nadpis 2}}
+\label{sec:nadpis_2}
+\subsubsection{\texorpdfstring{Nadpis 3}{Nadpis 3}}
+\label{sec:nadpis_3}
+\paragraph{\texorpdfstring{Nadpis 4}{Nadpis 4}}
+\label{sec:nadpis_4}
+\subparagraph{\texorpdfstring{Nadpis 5}{Nadpis 5}}
+\label{sec:nadpis_5}
+
+\end{document}

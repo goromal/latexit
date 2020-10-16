@@ -1,0 +1,23 @@
+\documentclass[a4paper, oneside, 10pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[unicode]{hyperref}
+\begin{document}
+
+\section{\texorpdfstring{LocalLink}{LocalLink}}
+\label{sec:locallink}
+
+This section (\autoref{sec:locallink})
+
+\section{\texorpdfstring{Another link}{Another link}}
+\label{sec:another_link}
+
+This section (\autoref{sec:another_link})
+
+\href{http://www.dokuwiki.org/Interwiki}{Interwiki}
+
+\href{file:///P:/Manuals/UserManual.pdf}{User Manual}
+
+\href{\\\\server\\share}{Windows share}
+
+\end{document}
