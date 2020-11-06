@@ -32,3 +32,4 @@ $lang['link_insertion_message'] = 'The message which is shown as header before e
 $lang['default_table_align'] = 'Sets the default align of cells in tables. As in LaTeX, '
         . 'l stands for left, c stands for center and r for right.';
 $lang['showexportbutton'] = "Show the export button?";
+$lang['export_latexit_button'] = "Whew!";

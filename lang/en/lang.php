@@ -10,3 +10,4 @@
 
 // custom language strings for the plugin
 // $lang['fixme'] = 'FIXME';
+$lang['export_latexit_button'] = "Export LaTeX";

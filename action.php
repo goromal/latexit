@@ -34,8 +34,8 @@ class action_plugin_latexit extends DokuWiki_Action_Plugin {
         //call _setLatexitSort before initializing language (the very first event in DW)
         $controller->register_hook('INIT_LANG_LOAD', 'BEFORE', $this, '_setLatexitSort');
 
-
         $controller->register_hook('TEMPLATE_PAGETOOLS_DISPLAY', 'BEFORE', $this, 'addbutton', array());
+        $controller->register_hook('MENU_ITEMS_ASSEMBLY', 'AFTER', $this, 'addsvgbutton', array());
     }
 
     /**
@@ -53,7 +53,7 @@ class action_plugin_latexit extends DokuWiki_Action_Plugin {
     public function addbutton(&$event, $param) {
         global $ID, $REV, $conf;
 
-        if ( $this->getConf('showexportbutton') && $event->data['view'] == 'main') {
+        if ($event->data['view'] == 'main') {
             $params = array('do' => 'export_latexit');
             if ($REV)
                 $params['rev'] = $REV;
@@ -89,7 +89,7 @@ class action_plugin_latexit extends DokuWiki_Action_Plugin {
      */
     public function addsvgbutton(Doku_Event $event) {
         global $INFO;
-        if($event->data['view'] != 'page' || !$this->getConf('showexportbutton')) {
+        if($event->data['view'] != 'page') {
             return;
         }
 

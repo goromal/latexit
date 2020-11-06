@@ -17,7 +17,7 @@ class MenuItem extends AbstractItem {
     protected $type = 'export_latexit';
 
     /** @var string icon file */
-    protected $svg = __DIR__ . '/file-latex.svg';
+    protected $svg = DOKU_INC . 'lib/plugins/latexit/f.svg';
 
     /**
      * MenuItem constructor.
