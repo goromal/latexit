@@ -267,6 +267,12 @@ class renderer_plugin_latexit extends Doku_Renderer {
             $pckg->addParameter('utf8x');
             $this->store->addPackage($pckg);
 
+            // math packages
+            $pckg = new Package('amssymb');
+            $this->store->addPackage($pckg);
+            $pckg = new Package('amsmath');
+            $this->store->addPackage($pckg);
+
             // add metadata to preamble
             $this->store->addPreamble(array('date', '\today')); // FIXME use the document's date instead
             // $this->store->addPreamble(array('title', $this->getConf('title')));
