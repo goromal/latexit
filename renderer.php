@@ -1660,28 +1660,49 @@ class renderer_plugin_latexit extends Doku_Renderer {
         $pckg->addCommand('\\graphicspath{{' . $media_folder . '/}}');
         $this->store->addPackage($pckg);
 
-
-        //http://stackoverflow.com/questions/2395882/how-to-remove-extension-from-string-only-real-extension
-        $path = preg_replace("/\\.[^.\\s]{3,4}$/", "", $path);
-
         //print align command
-        if (!is_null($align)) {
-            switch ($align) {
-                case "center":
-                    $this->_c('centering', NULL, 0);
-                    break;
-                case "left":
-                    $this->_c('raggedleft', NULL, 0);
-                    break;
-                case "right":
-                    $this->_c('raggedright', NULL, 0);
-                    break;
-                default :
-                    break;
-            }
+        // if (!is_null($align)) {
+        //     switch ($align) {
+        //         case "center":
+        //             $this->_c('centering', NULL, 0);
+        //             break;
+        //         case "left":
+        //             $this->_c('raggedleft', NULL, 0);
+        //             break;
+        //         case "right":
+        //             $this->_c('raggedright', NULL, 0);
+        //             break;
+        //         default :
+        //             break;
+        //     }
+        // }
+
+        // Parse path to see what kind of file it is; if svg, then add support for it
+        // dbglog($path);
+        if ($path[0] == "/") {
+            $path = ltrim($path, $path[0]);
         }
-        //insert image with params from config.
-        $this->_c('includegraphics', $path, 1, array($this->getConf('image_params')));
+        $mediatype = pathinfo($path, PATHINFO_EXTENSION);
+        // dbglog($mediatype);
+        if ($mediatype == "svg") {
+            $pckg = new Package('svg');
+            $pckg->addCommand('\\svgpath{{' . $media_folder . '/}}');
+            $this->store->addPackage($pckg);
+            // insert svg using all default params
+            $this->_c('includesvg', $path, 1, array());
+        } else {
+            //insert image with params from config.
+            $this->_c('includegraphics', $path, 1, array($this->getConf('image_params')));
+        }
+
+        // //http://stackoverflow.com/questions/2395882/how-to-remove-extension-from-string-only-real-extension
+        // dbglog($path);
+        // // $path = preg_replace("/\\.[^.\\s]{3,4}$/", "", $path);
+        // $path = ltrim($path, $path[0]);
+        // dbglog($path);
+
+        
+        
     }
 
     /**
