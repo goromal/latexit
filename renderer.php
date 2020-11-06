@@ -374,7 +374,8 @@ class renderer_plugin_latexit extends Doku_Renderer {
             $this->_fixImageRef();
 
 
-            $output = "output" . time() . ".latex";
+            // $output = "output" . time() . ".latex";
+            $output = "main.tex";
 
             //file to download will be ZIP archive
             if ($this->media || ($this->_useBibliography() && !$this->bib_handler->isEmpty())) {
@@ -388,7 +389,8 @@ class renderer_plugin_latexit extends Doku_Renderer {
                 $zip->close();
 
                 header("Content-type: application/zip");
-                header("Content-Disposition: attachment; filename=output" . time() . ".zip");
+                // header("Content-Disposition: attachment; filename=output" . time() . ".zip");
+                header("Content-Disposition: attachment; filename=document.zip");
                 header("Content-length: " . filesize($filename));
                 header("Pragma: no-cache");
                 header("Expires: 0");
@@ -1639,7 +1641,8 @@ class renderer_plugin_latexit extends Doku_Renderer {
         global $zip;
 
         //generate filename
-        $filename = $conf["tmpdir"] . "/output" . time() . ".zip";
+        // $filename = $conf["tmpdir"] . "/output" . time() . ".zip";
+        $filename = $conf["tmpdir"] . "/document.zip";
         //create ZIP archive
         if ($zip->open($filename, ZipArchive::CREATE) !== TRUE) {
             exit("LaTeXit was not able to open <$filename>, check access rights.\n");
